@@ -1,0 +1,85 @@
+@import "../../index.scss";
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba($color-black, 0.5);
+  position: absolute;
+  width: 100%;
+  animation: slideDown 1s ease;
+
+  &__icon {
+    height: 7rem;
+    padding: 0 1.5rem;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    form {
+      padding: 1rem;
+      position: relative;
+      animation: fadeInDown 1.2s ease-in;
+
+      input {
+        padding: 0.5rem 1.5rem;
+        border-radius: 2.5rem;
+        border: 1px solid $color-grey-dark;
+        width: 8rem;
+        outline: none;
+        transition: $trans-default;
+        letter-spacing: 0.2rem;
+        font-size: 1.6rem;
+
+        &:focus {
+          border: 1px solid $color-blue-light;
+          width: 25rem;
+        }
+      }
+
+      button {
+        background-color: transparent;
+        border: none;
+        font-size: 2rem;
+        position: absolute;
+        right: 2rem;
+        top: 1.4rem;
+        cursor: pointer;
+        color: $color-grey-dark;
+        outline: none;
+        transition: $trans-default;
+
+        &:hover {
+          color: $color-blue-light;
+        }
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+    width: fit-content;
+    color: $color-grey-light;
+    li {
+      display: inline-block;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        transition: $trans-default;
+
+        &:hover {
+          color: $color-blue-light;
+        }
+      }
+    }
+    &--item {
+      padding: 1rem;
+      font-size: 2.6rem;
+    }
+  }
+}
