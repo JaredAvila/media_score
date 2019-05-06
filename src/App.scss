@@ -1,0 +1,9 @@
+@import "./index.scss";
+
+h1 {
+  color: $color-blue;
+
+  span {
+    color: $color-grey-light;
+  }
+}
